@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Day -->
+    <TextView
+        android:id="@+id/date_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/event_date_day"
+        style="@style/date_field_to_display"/>
+
+    <!-- Month -->
+    <TextView
+        android:id="@+id/date_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/event_date_month"
+        style="@style/date_field_to_display"/>
+
+    <!-- Year -->
+    <TextView
+        android:id="@+id/date_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/event_date_year"
+        style="@style/date_field_to_display"/>
+
+</LinearLayout>

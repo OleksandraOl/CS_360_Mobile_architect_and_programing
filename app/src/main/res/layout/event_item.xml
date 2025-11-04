@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/text_color_on_primary"
+    android:foreground="?attr/selectableItemBackground"
+    app:strokeColor="@color/primary_color"
+    app:strokeWidth="2dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:minHeight="64dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:contentDescription="@string/event_title_and_time"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/background_color"
+        android:baselineAligned="false">
+
+        <!--Item information (left side) -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            >
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/event_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event_title"
+                style="@style/date_field_to_display"
+                android:focusable="false"
+                android:clickable="false"
+                android:longClickable="false"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/event_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/event_time"
+                style="@style/date_field_to_display"
+                android:focusable="false"
+                android:clickable="false"
+                android:longClickable="false"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+
+        <!--Edit/Delete buttons(right side)-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/action_edit"
+                android:focusable="true"
+                android:clickable="true"
+                android:contentDescription="@string/edit_event"
+                style="@style/edit_delete_button" />
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/action_delete"
+                android:focusable="true"
+                android:clickable="true"
+                android:contentDescription="@string/delete_event"
+                style="@style/edit_delete_button"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/auth_fragment">
+
+    <fragment
+        android:id="@+id/auth_fragment"
+        android:name="com.zybooks.event_tracking_app_kondieieva.AuthFragment"
+        android:label="Login/Sign up">
+        <action
+            android:id="@+id/action_authFragment_to_permissionRequestFragment"
+            app:destination="@id/permission_fragment"/>
+        <action
+            android:id="@+id/action_authFragment_to_homeFragment"
+            app:destination="@id/navigation_home"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/permission_fragment"
+        android:name="com.zybooks.event_tracking_app_kondieieva.PermissionRequestFragment"
+        android:label="Permission Request">
+        <action
+            android:id="@+id/action_permissionRequestFragment_to_homeFragment"
+            app:destination="@id/navigation_home"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.zybooks.event_tracking_app_kondieieva.HomeFragment"
+        android:label="@string/home">
+        <action
+            android:id="@+id/action_homeFragment_to_addEditTaskFragment"
+            app:destination="@id/add_edit_event"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_edit_event"
+        android:name="com.zybooks.event_tracking_app_kondieieva.AddEditTaskFragment"
+        android:label="AddEdit"/>
+
+    <fragment
+        android:id="@+id/navigation_week"
+        android:name="com.zybooks.event_tracking_app_kondieieva.WeekFragment"
+        android:label="@string/week" />
+
+    <fragment
+        android:id="@+id/navigation_today"
+        android:name="com.zybooks.event_tracking_app_kondieieva.TodayFragment"
+        android:label="@string/today" />
+
+</navigation>
